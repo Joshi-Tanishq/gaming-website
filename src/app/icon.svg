@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="zGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00a8ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0078ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f7931e;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="url(#bgGradient)"/>
+  
+  <!-- Outer glow effect -->
+  <rect x="1" y="1" width="30" height="30" rx="5" fill="none" stroke="url(#shadowGradient)" stroke-width="0.5" opacity="0.6"/>
+  
+  <!-- Letter Z with shadow -->
+  <g transform="translate(6, 6)">
+    <!-- Shadow Z -->
+    <path d="M1.5 1.5 L18.5 1.5 L18.5 4.5 L7 15 L18.5 15 L18.5 18.5 L1.5 18.5 L1.5 15.5 L13 5 L1.5 5 Z" 
+          fill="url(#shadowGradient)" opacity="0.4"/>
+    
+    <!-- Main Z -->
+    <path d="M1 1 L18 1 L18 4 L6.5 14.5 L18 14.5 L18 18 L1 18 L1 15 L12.5 4.5 L1 4.5 Z" 
+          fill="url(#zGradient)"/>
+    
+    <!-- Highlight on Z -->
+    <path d="M1 1 L18 1 L18 2.5 L1 2.5 Z" fill="#4dfeff" opacity="0.8"/>
+    <path d="M1 15.5 L18 15.5 L18 18 L1 18 Z" fill="#4dfeff" opacity="0.8"/>
+  </g>
+  
+  <!-- Decorative gaming elements -->
+  <circle cx="26" cy="6" r="1.5" fill="#00ff88" opacity="0.7"/>
+  <circle cx="6" cy="26" r="1.5" fill="#ff3366" opacity="0.7"/>
+  <rect x="25" y="25" width="2" height="2" rx="0.5" fill="#ffaa00" opacity="0.7"/>
+</svg>

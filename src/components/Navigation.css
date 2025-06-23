@@ -1,0 +1,164 @@
+/* Navigation.css */
+
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  transition: all 0.5s;
+}
+.navigation.scrolled {
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(16px);
+  padding: 12px 0;
+  box-shadow: 0 4px 24px 0 rgba(16,185,129,0.2);
+}
+.navigation.unscrolled {
+  background: transparent;
+  backdrop-filter: blur(4px);
+  padding: 24px 0;
+}
+.navigation-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #4ade80, #10b981, #2dd4bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.desktop-nav {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+.desktop-nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  padding: 0 8px;
+  transition: color 0.3s;
+}
+.desktop-nav button.active {
+  color: #4ade80;
+}
+.desktop-nav button:not(.active):hover {
+  color: #a78bfa;
+}
+.book-now-btn {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #16a34a, #059669);
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+.book-now-btn:hover {
+  background: linear-gradient(to right, #22c55e, #10b981);
+  transform: scale(1.05);
+}
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  border: 1px solid rgba(16,185,129,0.3);
+  cursor: pointer;
+  transition: border 0.3s;
+}
+.menu-btn:hover {
+  border-color: #4ade80;
+}
+.menu-bar {
+  width: 20px;
+  height: 3px;
+  background: linear-gradient(to right, #4ade80, #10b981);
+  margin: 2px 0;
+  transition: all 0.3s;
+}
+.menu-bar.open1 {
+  transform: rotate(45deg) translateY(4px);
+}
+.menu-bar.open2 {
+  opacity: 0;
+}
+.menu-bar.open3 {
+  transform: rotate(-45deg) translateY(-6px);
+}
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(16px);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s;
+}
+.mobile-menu.closed {
+  opacity: 0;
+  pointer-events: none;
+}
+.mobile-menu button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 16px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+.mobile-menu button:hover {
+  background: #059669;
+  color: #fff;
+  transform: translateX(8px);
+}
+.mobile-book-btn {
+  background: linear-gradient(to right, #16a34a, #059669);
+  color: #fff;
+  padding: 20px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  border: none;
+  margin-top: 32px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.mobile-book-btn:hover {
+  background: linear-gradient(to right, #22c55e, #10b981);
+  transform: scale(0.98);
+}
+@media (max-width: 768px) {
+  .desktop-nav, .book-now-btn { display: none; }
+  .menu-btn { display: flex; }
+}
+@media (min-width: 769px) {
+  .mobile-menu, .menu-btn { display: none; }
+  .desktop-nav, .book-now-btn { display: flex; }
+}
