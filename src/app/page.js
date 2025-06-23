@@ -1,4 +1,5 @@
 import Navigation from '../components/Navigation';
+import Image from 'next/image';
 import './Home.css';
 
 export default function Home() {
@@ -90,10 +91,9 @@ export default function Home() {
                 <li className="gaming-features-item">
                   <span className="gaming-features-icon">🏠</span>
                   <span>Private PS5 gaming cabinets with premium sound isolation</span>
-                </li>
-                <li className="gaming-features-item" style={{animationDelay: '0.1s'}}>
+                </li>                <li className="gaming-features-item" style={{animationDelay: '0.1s'}}>
                   <span className="gaming-features-icon">📺</span>
-                  <span>4K gaming on 55" OLED displays for crystal-clear visuals</span>
+                  <span>4K gaming on 55&quot; OLED displays for crystal-clear visuals</span>
                 </li>
                 <li className="gaming-features-item" style={{animationDelay: '0.2s'}}>
                   <span className="gaming-features-icon">🎯</span>
@@ -119,25 +119,31 @@ export default function Home() {
             </div>            <div className="gaming-image-container">
               <div className="gaming-image-wrapper">
                 <div className="gaming-image-inner">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                     alt="PS5 Gaming Setup" 
                     className="gaming-main-image"
+                    width={1000}
+                    height={600}
                   />
                   <div className="gaming-small-images">
-                    <img 
+                    <Image 
                       src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
                       alt="Gaming Controller" 
                       className="gaming-small-image"
+                      width={500}
+                      height={300}
                     />
-                    <img 
+                    <Image 
                       src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
                       alt="Gaming Setup" 
                       className="gaming-small-image"
+                      width={500}
+                      height={300}
                     />
                   </div>
                 </div>
-              </div>              <div className="pricing-badge">
+              </div><div className="pricing-badge">
                 🔥 STARTING ₹1,245/HR
               </div>
             </div>          </div>          {/* Gaming Stats */}
